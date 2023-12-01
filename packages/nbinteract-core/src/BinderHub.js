@@ -53,7 +53,7 @@ export default class BinderHub {
     this.provider = provider
     this.spec = spec
     this.nbUrl = nbUrl + '?token=EYJjxk6GbYQFy5in16qDC6rPND3GeJAXKT5BGA30R1P8rGwP'
-    this.token = 'EYJjxk6GbYQFy5in16qDC6rPND3GeJAXKT5BGA30R1P8rGwP'
+    this.token = ''
     this.callbacks = callbacks
     this.state = null
 
