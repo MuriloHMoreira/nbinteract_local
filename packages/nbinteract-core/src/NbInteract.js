@@ -219,7 +219,6 @@ export default class NbInteract {
   async _startKernel() {
     try {
       const { url, token } = await this.binder.startServer()
-
       // Connect to the notebook webserver.
       const serverSettings = ServerConnection.makeSettings({
         baseUrl: url,
@@ -239,6 +238,7 @@ export default class NbInteract {
       localStorage.kernelId = kernel.id
 
       console.log('Started kernel:', kernel.id)
+
       return kernel
     } catch (err) {
       debugger

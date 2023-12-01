@@ -1,6 +1,6 @@
 .PHONY: help serve build publish docs install clean book bump_binder notebooks
 
-NB_SERVER_OPTS = --port 8889 --no-browser --NotebookApp.allow_origin="*" --NotebookApp.disable_check_xsrf=True --NotebookApp.token='' --MappingKernelManager.cull_idle_timeout=300
+NB_SERVER_OPTS = --port 8889 --no-browser --NotebookApp.allow_origin="*" --NotebookApp.disable_check_xsrf=True --NotebookApp.token='EYJjxk6GbYQFy5in16qDC6rPND3GeJAXKT5BGA30R1P8rGwP' --MappingKernelManager.cull_idle_timeout=300
 
 BINDER_REGEXP=.*"message": "([^"]+)".*
 
