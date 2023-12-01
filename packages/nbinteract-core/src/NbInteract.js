@@ -206,6 +206,7 @@ export default class NbInteract {
       baseUrl: url,
       wsUrl: util.baseToWsUrl(url),
       token: token,
+      appendToken: True,
     })
 
     const kernelModel = await Kernel.findById(kernelId, serverSettings)
@@ -224,6 +225,7 @@ export default class NbInteract {
         baseUrl: url,
         wsUrl: util.baseToWsUrl(url),
         token: token,
+        appendToken: True,
       })
 
       // Start a kernel
