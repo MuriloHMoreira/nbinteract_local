@@ -1,5 +1,5 @@
 {
-  "name": "nbinteract",
+  "name": "nbinteract-local",
   "version": "0.2.8",
   "description": "Script to allow public interactive Jupyter notebooks",
   "main": "built/index.bundle.js",
@@ -29,5 +29,5 @@
   "dependencies": {
     "nbinteract-core": "^0.2.6"
   },
-  "gitHead": "e09b24b5a5fd16a0960277aabf41dc4276fbdbe8"
+  "gitHead": "dd3dc78c6eac7823aae4b3e6bfa0687d3a9e30d1"
 }

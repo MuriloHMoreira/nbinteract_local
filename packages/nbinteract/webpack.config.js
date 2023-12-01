@@ -3,7 +3,7 @@ const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 
-const coreConfig = require('../nbinteract-core/webpack.config.js')
+const coreConfig = require('../nbinteract-local/webpack.config.js')
 
 const config = merge(coreConfig, {
   entry: {

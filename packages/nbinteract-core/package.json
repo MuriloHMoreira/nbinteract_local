@@ -1,5 +1,5 @@
 {
-  "name": "nbinteract-local",
+  "name": "nbinteract-core-local",
   "version": "0.2.8",
   "description": "Library to allow public interactive Jupyter notebooks",
   "main": "lib/index.bundle.js",
