@@ -52,17 +52,17 @@ export default class BinderHub {
     this.baseUrl = baseUrl
     this.provider = provider
     this.spec = spec
-    this.nbUrl = nbUrl + '?token=EYJjxk6GbYQFy5in16qDC6rPND3GeJAXKT5BGA30R1P8rGwP'
-    this.token = ''
+    this.nbUrl = nbUrl
+    this.token = 'EYJjxk6GbYQFy5in16qDC6rPND3GeJAXKT5BGA30R1P8rGwP'
     this.callbacks = callbacks
     this.state = null
 
     // Logs all messages sent by Binder
     this.registerCallback('*', (oldState, newState, data) => {
       if (data.message !== undefined) {
-        console.log('oi')
+        console.log(data.message)
       } else {
-        console.log('oi')
+        console.log(data)
       }
     })
   }

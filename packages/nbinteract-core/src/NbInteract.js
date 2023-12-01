@@ -202,12 +202,13 @@ export default class NbInteract {
     const { serverParams, kernelId } = localStorage
     const { url, token } = JSON.parse(serverParams)
 
-    const serverSettings = ServerConnection.makeSettings({
+    let serverSettings = ServerConnection.makeSettings({
       baseUrl: url,
       wsUrl: util.baseToWsUrl(url),
       token: token,
     })
-
+    serverSettings.appendToken = true;
+    console.log(serverSettings)
     const kernelModel = await Kernel.findById(kernelId, serverSettings)
     return { serverSettings, kernelModel }
   }
@@ -220,12 +221,13 @@ export default class NbInteract {
     try {
       const { url, token } = await this.binder.startServer()
       // Connect to the notebook webserver.
-      const serverSettings = ServerConnection.makeSettings({
+      let serverSettings = ServerConnection.makeSettings({
         baseUrl: url,
         wsUrl: util.baseToWsUrl(url),
         token: token,
       })
-
+      serverSettings.appendToken = true;
+      console.log(serverSettings)
       // Start a kernel
       const kernelSpecs = await Kernel.getSpecs(serverSettings)
       const kernel = await Kernel.startNew({
