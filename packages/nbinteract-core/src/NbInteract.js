@@ -208,7 +208,6 @@ export default class NbInteract {
       token: token,
     })
     serverSettings.appendToken = true;
-    console.log(serverSettings)
     const kernelModel = await Kernel.findById(kernelId, serverSettings)
     return { serverSettings, kernelModel }
   }
